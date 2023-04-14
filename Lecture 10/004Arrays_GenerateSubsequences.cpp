@@ -11,7 +11,7 @@ int main() {
 		cout << i << " : ";
 		for(int j=0; j<n; j++) {
 			if((i>>j)&1) {
-				// jth bit of 'i' is set therefore include arr[j] in the subsequence
+				// jth bit of  'i'  is set therefore include arr[j] in the subsequence
 				cout << arr[j] << " ";
 			}
 		}
