@@ -11,7 +11,6 @@ int main() {
 
 	for(int i=0; i<=n-2; i++) {
 
-
 		// in the ith pass, place the smallest element in the unsorted part of the array to its correct position
 
 		int min_idx = i;

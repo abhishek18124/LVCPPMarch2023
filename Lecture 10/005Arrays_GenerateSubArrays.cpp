@@ -14,6 +14,7 @@ int main() {
 			// cout << i << " " << j << endl;
 
 			// to generate the subarray arr[i...j], iterate over the array from i to j
+
 			for(int k=i; k<=j; k++) {
 				cout << arr[k] << " ";
 			}

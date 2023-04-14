@@ -12,7 +12,6 @@ int main() {
 	for(int i=1; i<=n-1; i++) {
 
 		// in the ith pass, insert the first element in the unsorted part of the array i.e. arr[i] to its correct position in the sorted part of the array 
-
 		int key = arr[i];
 		int j = i-1;
 

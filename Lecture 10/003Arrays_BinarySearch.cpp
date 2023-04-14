@@ -17,9 +17,11 @@ int main() {
 	// 2. run the binary search algorithm
 
 	while(s <= e) {
+		
 		// int m = (s+e)/2; // this can lead to integer overflow
 		// int m = s+(e-s)/2;
-		int m = s+((e-s)>>1) ;
+		int m = s+((e-s)>>1) ; // >> is faster than /
+		
 		if(arr[m] == t) {
 			// you've found the target at index 'm' therefore stop
 			cout << t << " found at index " << m << endl;
