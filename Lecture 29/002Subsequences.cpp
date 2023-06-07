@@ -42,7 +42,9 @@ void f(char* inp, int i, char* out, int j, set<string>& s) {
 
 	// 1. include inp[i] in the out[]
 	out[j] = inp[i];
+	// j++;
 	f(inp, i + 1, out, j + 1, s);
+	// j--; // backtracking step
 
 	// 2. exclude inp[i] from the out[]
 	f(inp, i + 1, out, j, s);
