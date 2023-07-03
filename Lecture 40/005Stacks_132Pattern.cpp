@@ -26,16 +26,13 @@ bool find132pattern(vector<int>& nums) {
 
       // find the nearest greater element to the right of nums_i
 
-      // intuitively, we should find next greater element for nums_i
-
-      // but, why is this working ? todo ...
-
       while (!s.empty() and s.top() <= nums_i) {
          s.pop();
       }
 
       if (!s.empty() and s.top() < nums[j]) { // !s.empty() -> you've found next greater element of nums_i
          // s.top() is nums_k therefore you've found 132 pattern
+         cout << nums_i << " " << nums[j] << " " << s.top() << endl;
          return true;
       }
 
