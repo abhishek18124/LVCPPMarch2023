@@ -16,22 +16,26 @@ class stack {
 
 public:
 
+	// time : O(1)
+
 	void push(T data) {
-		if(q1.empty() && q2.empty()) {
+		if (q1.empty() && q2.empty()) {
 			q1.push(data); // or q2.push(data)
-		} else if(q1.empty() && !q2.empty()) {
+		} else if (q1.empty() && !q2.empty()) {
 			q2.push(data);
 		} else {
 			q1.push(data);
 		}
 	}
 
+	// time : O(n) : n-1 push + n pop = 2n-1 operations
+
 	void pop() {
-		if(q1.empty() && q2.empty()) {
+		if (q1.empty() && q2.empty()) {
 			// stack is empty
-		} else if(q1.empty() && !q2.empty()) {
+		} else if (q1.empty() && !q2.empty()) {
 			// transfer n-1 elements from q2 to q1
-			while(q2.size() > 1) {
+			while (q2.size() > 1) {
 				q1.push(q2.front());
 				q2.pop();
 			}
@@ -39,7 +43,7 @@ public:
 			q2.pop();
 		} else {
 			// transfer n-1 elements from q1 to q2
-			while(q1.size() > 1) {
+			while (q1.size() > 1) {
 				q2.push(q1.front());
 				q1.pop();
 			}
@@ -48,10 +52,12 @@ public:
 		}
 	}
 
+	// time : O(n)
+
 	T top() {
-		if(q1.empty() && !q2.empty()) {
+		if (q1.empty() && !q2.empty()) {
 			// transfer n-1 elements from q2 to q1
-			while(q2.size() > 1) {
+			while (q2.size() > 1) {
 				q1.push(q2.front());
 				q2.pop();
 			}
@@ -62,7 +68,7 @@ public:
 			return ans;
 		} else {
 			// transfer n-1 elements from q1 to q2
-			while(q1.size() > 1) {
+			while (q1.size() > 1) {
 				q2.push(q1.front());
 				q1.pop();
 			}
@@ -95,7 +101,7 @@ int main() {
 
 	cout << "size = " << s.size() << endl;
 
-	while(!s.empty()) {
+	while (!s.empty()) {
 		cout << s.top() << endl;
 		s.pop();
 	}
@@ -103,6 +109,6 @@ int main() {
 	cout << endl;
 
 	s.empty() ? cout << "true" << endl : cout << "false" << endl;
- 
-	return 0;	
+
+	return 0;
 }
