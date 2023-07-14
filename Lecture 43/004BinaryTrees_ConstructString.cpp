@@ -70,7 +70,7 @@ string tree2str(TreeNode* root) {
 	}
 
 	if (rightRepr != "") {
-		return to_string(root->val) + "()(" + rightRepr + ")";
+		return to_string(root->val) + "(?)(" + rightRepr + ")";
 	}
 
 	return to_string(root->val);
