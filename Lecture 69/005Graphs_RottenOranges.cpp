@@ -34,7 +34,7 @@ public:
                 int jj = j + dy[k];
                 if (ii >= 0 and ii < m and jj >= 0 and jj < n and grid[ii][jj] == 1) {
                     // (ii, jj)th node corresponds to a fresh orange adjacent to a rotten orange at (i, j)th node
-                    grid[ii][jj] = 2;
+                    grid[ii][jj] = 2; // (ii, jj) is now rotten i.e. visited
                     dist[ii][jj] = dist[i][j] + 1;
                     q.push({ii, jj});
                 }
